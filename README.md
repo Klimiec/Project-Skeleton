@@ -42,7 +42,7 @@ Warto notować takie rzeczy w formie notatki/komentarza przy integracji z każdy
 Jeżeli integracja jest ‘ciężka’ szczegóły integracji można umieścić w dedykowanym dokumencie a na miro zanotować tylko informację o obiekcie wejściowym, wyjściowym oraz nazwie interfejsu.
 Nazwa interfejsu powinna oddawać ‘intencję komunikacyjną’ która stoi za daną integracją. Unikajmy zbyt ogólnych albo technicznych nazw.
 
-![Integration Details](docs/images/integration details.png)
+![Integration Details](docs/images/integration-details.png)
 
 Inne potencjalne ryzyka (hot spoty), na które warto zwrócić uwagę przy integracji z innymi usługami:
 - Czy usługa, z która się integrujemy jest gotowa na ruch, który będziemy generować?
@@ -86,14 +86,14 @@ Struktura projektu w pierwszej kolejności powinna odzwierciedlać modelowaną d
 Wyznaczone na Event Stormingu granice bounded contextów powinniśmy przedstawić w kodzie za pomocą odpowiednich pakietów.
 Następnie relacje między tymi pakietami opisać za pomocą testów architektury ([ArchUnit](https://www.archunit.org/)), które będą nas chronić przed niechcianymi zależnościami na poziomie kompilacji.
 
-![Multiple Bounded Contexts](docs/images/multiple bounded contexts.png)
+![Multiple Bounded Contexts](docs/images/multiple-bounded-contexts.png)
 
 W początkowej fazie projektu podejście, w którym wykorzystujemy pakiety oraz testy architektury do nadania kształtu naszej aplikacji jest zdecydowanie lepsze niż używanie do tego celu modułów mavenowych/gradlowych. Refactoring w przypadku pakietów jest zdecydowanie szybszy i prostszy.
 
 Co w przypadku kiedy mamy jeden bounded context?
 Pokażmy go! Najlepiej zrobić to poprzez umieszczenie klasy z funkcją **main** na tym samym poziomie co pakiet z naszym Bounded Context.
 
-![Single Bounded Contexts](docs/images/single bounded context.png)
+![Single Bounded Contexts](docs/images/single-bounded-context.png)
 
 Podział domenowy można kontynuować dalej w obrębie każdego BC.
 
@@ -134,7 +134,7 @@ Zależności między pakietami technicznymi należy opisać za pomocą testów a
 Testy takie wystarczy napisać raz i re-używać między projektami, które wykorzystują tę samą architekturę i konwencje.
 Testy architektury, które będziemy pisać dla podziału biznesowego (domenowego) będą z kolei unikalne dla danego projektu.
 
-![Technical Packages Structure.png](docs/images/packages structure.png)
+![Technical Packages Structure.png](docs/images/packages-structure.png)
 
 ### Use Case
 
