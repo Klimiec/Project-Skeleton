@@ -101,6 +101,8 @@ Na każdym etapie trwania projektu warto poddawać ocenie aktualny podział bizn
 To, co było dobre w pierwszym roku developmentu, po dodaniu kilku nowych funkcjonalności może okazać się niewystarczające.
 Struktura domenowa projektu powinna ewoluować wraz z rozwojem projektu.
 
+Testy architektury dla podziału domenowego: [BoundedContextTest](src/test/kotlin/dev/sandbox/projectskeleton/archunit/BoundedContextTest.kt)
+
 Przykłady projektów w oparciu o domain-based structure:
 - [ddd-example-ecommerce](https://github.com/ttulka/ddd-example-ecommerce)
 - [library](https://github.com/ddd-by-examples/library)
@@ -133,6 +135,10 @@ Jeżeli zachodzi potrzeba wystawienia REST-owego endpointu należy umieścić go
 Zależności między pakietami technicznymi należy opisać za pomocą testów architektury.
 Testy takie wystarczy napisać raz i re-używać między projektami, które wykorzystują tę samą architekturę i konwencje.
 Testy architektury, które będziemy pisać dla podziału biznesowego (domenowego) będą z kolei unikalne dla danego projektu.
+
+Testy architektury dla podziału technicznego: 
+* [HexagonalArchitectureTest](src/test/kotlin/dev/sandbox/projectskeleton/archunit/HexagonalArchitectureTest.kt)
+* [CodingRulesTest](src/test/kotlin/dev/sandbox/projectskeleton/archunit/CodingRulesTest.kt)
 
 ![Technical Packages Structure.png](docs/images/packages-structure.png)
 
